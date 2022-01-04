@@ -22,9 +22,66 @@ body{
 
 .introduction{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    height: 8vh;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+}
+
+.navbar-website{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+}
+
+.navbar-website a{
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c2c2c2;
+    font-size: 1.5em;
+    padding: 0 30px;
+    height: 4vh;
+    border-radius: 5px;
+}
+
+.navbar-website a{
+    transition: .3s;
+}
+
+.navbar-website a:hover{
+    text-shadow: -8px -4px 1px #71009e;
+    transform: scale(1.2);
+}
+
+.navbar-social{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 20%;
+}
+
+.navbar-social img{
+    width: 40px;
+    height: 40px;
+}
+
+.introduction-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .introduction-text{
@@ -49,7 +106,7 @@ body{
     height: 100%;
 }
 
-.introduction-content{
+.introduction-image-content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +118,7 @@ body{
     margin-left: -100%;
 }
 
-.introduction-content::before{
+.introduction-image-content::before{
     content: "";
     background-image: conic-gradient(
         #63008a 20deg,
@@ -73,7 +130,7 @@ body{
     animation: rotate 6s linear infinite;
 }
 
-.introduction-content::after{
+.introduction-image-content::after{
     content: "";
     width: 490px;
     height: 490px;
@@ -82,7 +139,7 @@ body{
     border-radius: 20px;
 }
 
-.introduction-content img{
+.introduction-image-content img{
     filter: brightness(80%);
     width: calc(100% - 10px);
     height: calc(100% - 10px);
@@ -121,7 +178,7 @@ body{
     height: 350px;
     background-color: #505050;
     border-radius: 20px;
-    box-shadow: #63008a -3px -2px 5px;
+    box-shadow: #4e006d -3px -4px 5px;
 }
 
 .card-content{
@@ -130,7 +187,7 @@ body{
 
 .card-content:hover{
     transform: rotateY(15deg);
-    box-shadow: #63008a -15px -2px 5px;
+    box-shadow: #4e006d -15px -4px 5px;
 }
 
 .card-content img{
