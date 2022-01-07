@@ -60,8 +60,9 @@ body{
 }
 
 .navbar-website a:hover{
-    text-shadow: -8px -4px 1px #71009e;
     transform: scale(1.2);
+    color: #854d99;
+    cursor: pointer;
 }
 
 .navbar-social{
@@ -157,6 +158,35 @@ body{
 }
 
 .projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.header p{
+    color: #c2c2c2;
+    font-size: 3em;
+    line-height: 1.3;
+}
+
+.header p:hover{
+    text-shadow: -2px -2px 5px #4e006d;
+}
+
+.header hr{
+    border-color: #505050;
+    background-color: #505050;
+    margin: 30px 0;
+}
+
+
+.projects-content{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
