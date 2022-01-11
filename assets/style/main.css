@@ -1,28 +1,19 @@
 body{
     background: #1b1b1c;
+    overflow: hidden;
 }
 
-
-*::-webkit-scrollbar {
-	width: 8px;
+.container{
+    display: flex;
 }
 
-*::-webkit-scrollbar-track {
-	background: #333333;      
-}
-
-*::-webkit-scrollbar-thumb {
-	background: #969696;
-	border-radius: 30px; 
-}
-
-*::-webkit-scrollbar-thumb:hover {
-	background: #747474;
+.content{
+    width: 85%;
+    margin-left: 15%;
 }
 
 .introduction{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
@@ -30,17 +21,21 @@ body{
 
 .navbar{
     display: flex;
-    height: 8vh;
-    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    width: 15%;
     align-items: center;
-    position: absolute;
+    background-image: linear-gradient(#3b3b3b, #1b1b1c);
+    position: fixed;
 }
 
 .navbar-website{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 95%;
+    height: 100%;
 }
 
 .navbar-website a{
@@ -50,9 +45,10 @@ body{
     align-items: center;
     color: #c2c2c2;
     font-size: 1.5em;
-    padding: 0 30px;
-    height: 4vh;
-    border-radius: 5px;
+    padding: 10px 30px;
+    height: 8vh;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .navbar-website a{
@@ -60,9 +56,10 @@ body{
 }
 
 .navbar-website a:hover{
-    transform: scale(1.2);
-    color: #854d99;
+    background-color: #6f268b;
+    color: #ffffff;
     cursor: pointer;
+    position: static;
 }
 
 .navbar-social{
@@ -75,14 +72,6 @@ body{
 .navbar-social img{
     width: 40px;
     height: 40px;
-}
-
-.introduction-content{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
 }
 
 .introduction-text{
@@ -102,7 +91,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(#3b3b3b, #1b1b1c);
     width: 20%;
     height: 100%;
 }
@@ -160,44 +148,41 @@ body{
 .projects{
     display: flex;
     flex-direction: column;
-}
-
-.header{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 0 5%;
+    height: 100vh;
 }
-
-.header p{
-    color: #c2c2c2;
-    font-size: 3em;
-    line-height: 1.3;
-}
-
-.header p:hover{
-    text-shadow: -2px -2px 5px #4e006d;
-}
-
-.header hr{
-    border-color: #505050;
-    background-color: #505050;
-    margin: 30px 0;
-}
-
 
 .projects-content{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    height: 100%;
+    overflow: auto;
+}
+
+.projects-content::-webkit-scrollbar {
+	width: 8px;
+}
+
+.projects-content::-webkit-scrollbar-track {
+	background: #333333;      
+}
+
+.projects-content::-webkit-scrollbar-thumb {
+	background: #969696;
+	border-radius: 30px; 
+}
+
+.projects-content::-webkit-scrollbar-thumb:hover {
+	background: #747474;
 }
 
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    margin: 20px 0;
+    width: calc(50% - 40px);
+    padding: 70px 20px;
 }
 
 .card-content{
