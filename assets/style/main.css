@@ -1,16 +1,44 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     background: #1b1b1c;
-    overflow: hidden;
+}
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #333333;      
+}
+
+*::-webkit-scrollbar-thumb {
+	background: #969696;
+	border-radius: 30px; 
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background: #747474;
 }
 
 .container{
     display: flex;
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+    from{ opacity: 0;
+    }
+    to{ opacity: 1; 
+    }
 }
 
 .content{
-    width: 85%;
+    width: 100%;
     height: 100%;
-    margin-left: 15%;
+    
 }
 
 .introduction{
@@ -22,34 +50,29 @@ body{
 
 .navbar{
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 15%;
+    height: 9vh;
+    width: 100%;
     align-items: center;
-    background-image: linear-gradient(#3b3b3b, #1b1b1c);
+    background-image: linear-gradient(#303030, #1b1b1c);
     position: fixed;
+    z-index: 2;
 }
 
 .navbar-website{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 95%;
+    width: 100%;
     height: 100%;
 }
 
 .navbar-website a{
     all: unset;
     display: flex;
-    justify-content: center;
     align-items: center;
     color: #c2c2c2;
     font-size: 1.5em;
-    padding: 10px 30px;
     height: 8vh;
-    width: 100%;
-    border-radius: 10px;
 }
 
 .navbar-website a{
@@ -57,23 +80,8 @@ body{
 }
 
 .navbar-website a:hover{
-    background-color: #6f268b;
-    color: #ffffff;
+    color: #6f268b;
     cursor: pointer;
-    position: static;
-}
-
-.contacts{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 80%;
-    margin: 30px;
-}
-
-.contacts img{
-    width: 40px;
-    height: 40px;
 }
 
 .introduction-text{
@@ -102,8 +110,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     position: relative;
     overflow: hidden;
     border-radius: 20px;
@@ -123,8 +131,8 @@ body{
 
 .introduction-image-content::after{
     content: "";
-    width: 490px;
-    height: 490px;
+    width: 440px;
+    height: 440px;
     background-color: #1b1b1c;
     position: absolute;
     border-radius: 20px;
@@ -138,6 +146,19 @@ body{
     z-index: 1;
 }
 
+.introduction-contacts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 500px;
+    margin: 30px;
+}
+
+.introduction-contacts img{
+    width: 40px;
+    height: 40px;
+}
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -149,8 +170,8 @@ body{
 
 .projects{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 
@@ -158,57 +179,63 @@ body{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100%;
+    width: 90%;
+    height: 70%;
+    margin: 0 5%;
+    border: 3px solid #4e006d;
+    box-shadow: 0px 0px 20px #383838;
+    border-radius: 20px;
     overflow: auto;
-}
-
-.projects-content::-webkit-scrollbar {
-	width: 8px;
-}
-
-.projects-content::-webkit-scrollbar-track {
-	background: #333333;      
-}
-
-.projects-content::-webkit-scrollbar-thumb {
-	background: #969696;
-	border-radius: 30px; 
-}
-
-.projects-content::-webkit-scrollbar-thumb:hover {
-	background: #747474;
 }
 
 .card{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: calc(50% - 100px);
-    padding: 70px 50px;
+    width: 20%;
+    padding: 40px;
 }
 
 .card-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 40vh;
-    background-color: #505050;
+    width: 70%;
+    height: 200px;
+    background-color: #474747;
     border-radius: 20px;
-    box-shadow: #4e006d -3px -4px 5px;
+    box-shadow: #383838 -3px -4px 5px;
 }
 
-.card-content{
+.card-content, .card-content img{
     transition: 0.5s;
+}
+
+.card-content img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.card-content::before{
+    display: none;
+    content: "More informations";
+    color: #505050;
+    position: absolute;
+    font-size: 1.5em;
 }
 
 .card-content:hover{
     transform: rotateY(15deg);
     box-shadow: #4e006d -15px -4px 5px;
+    background-color: #3b3b3b;
 }
 
-.card-content img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
+.card-content:hover img{
+    opacity: 0;
+}
+
+.card-content:hover::before{
+    display: flex;
+    color: #afafaf;
 }
