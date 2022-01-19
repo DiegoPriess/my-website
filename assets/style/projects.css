@@ -1,8 +1,15 @@
 .projects{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.projects p{
+    font-size: 3.5em;
+    margin: 40px 0;
+    color: #c2c2c2;
 }
 
 .projects-content{
@@ -10,9 +17,8 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 90%;
-    height: 760%;
-    border: 3px solid #4e006d;
-    box-shadow: 0px 0px 20px #383838;
+    height: 60%;
+    box-shadow: 0px 0px 20px #610088;;
     border-radius: 20px;
     overflow: auto;
 }

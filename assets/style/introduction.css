@@ -85,3 +85,11 @@
         transform: rotate(-360deg);
     }
 }
+
+.instagram-logo{
+    filter: brightness(0.9);
+}
+
+.whatsapp-logo{
+    filter: brightness(1.2);
+}

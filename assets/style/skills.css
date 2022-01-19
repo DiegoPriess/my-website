@@ -1,0 +1,8 @@
+.skills{
+    display: flex;
+    height: 100vh;
+}
+
+.skills-content img{
+    width: 200px;
+}
