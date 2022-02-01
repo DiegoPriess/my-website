@@ -28,21 +28,14 @@
     justify-content: center;
     align-items: center;
     width: 20%;
-    padding: 40px;
-}
-
-.card-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 200px;
+    height: 40%;
+    margin: 5%;
     background-color: #474747;
     border-radius: 20px;
     box-shadow: #383838 -3px -4px 5px;
 }
 
-.card-content, .card-content img{
+.card, .card img{
     transition: 0.5s;
 }
 
@@ -52,7 +45,7 @@
     border-radius: 20px;
 }
 
-.card-content::before{
+.card::before{
     display: none;
     content: "More informations";
     color: #505050;
@@ -60,17 +53,17 @@
     font-size: 1.5em;
 }
 
-.card-content:hover{
+.card:hover{
     transform: rotateY(15deg);
     box-shadow: #4e006d -15px -4px 5px;
     background-color: #3b3b3b;
 }
 
-.card-content:hover img{
+.card:hover img{
     opacity: 0;
 }
 
-.card-content:hover::before{
+.card:hover::before{
     display: flex;
     color: #afafaf;
 }
